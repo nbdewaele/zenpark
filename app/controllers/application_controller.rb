@@ -8,4 +8,5 @@ class ApplicationController < ActionController::Base
 	def configure_permitted_parmeters
 		devise_parameter_sanitizer.permit(:sugn_up, keys: [:fullname])
 		devise_parameter_sanitizer.permit(:account_update, keys: [:fullname])
+	end
 end
