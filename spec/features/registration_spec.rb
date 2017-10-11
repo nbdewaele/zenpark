@@ -3,7 +3,7 @@ require 'rails_helper'
 feature "user registers for site" do
 
 
-	scenario "host registers" do
+	scenario "user registers" do
 		visit new_user_registration_path
 		click_link "Become A Host"
 		fill_in_registration_fields
