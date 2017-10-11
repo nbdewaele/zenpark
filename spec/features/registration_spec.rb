@@ -4,7 +4,7 @@ feature "user registers for site" do
 
 
 	scenario "host registers" do
-		visit root_path
+		visit new_user_registration_path
 		click_link "Become A Host"
 		fill_in_registration_fields
 		expect(page).to have_content("Welcome, you have signed up successfully.")
