@@ -53,14 +53,24 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 	config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+	#FOR MAILGUN
 	config.action_mailer.delivery_method = :smtp
-
 	config.action_mailer.smtp_settings = {
-		address: 'smtp.gmail.com',
+		address: 'smtp.mailgun.org',
 		port: 587,
-		enable_starttls_auto: true,
+		domain: 'sandbox2716c17a44704e8b8fe63780f0bc3d21.mailgun.org',
 		authentication: 'plain',
-		user_name: 'lolitapomegranate@gmail.com',
-		password: 'devteam12'
+		user_name: 'postmaster@sandbox2716c17a44704e8b8fe63780f0bc3d21.mailgun.org',
+		password: 'e8d977904b1ec051593efa85c9341286'
 	}
+
+	# FOR TESTING W DEV GMAIL ACCOUNT
+	# config.action_mailer.smtp_settings = {
+	# 	address: 'smtp.gmail.com',
+	# 	port: 587,
+	# 	enable_starttls_auto: true,
+	# 	authentication: 'plain',
+	# 	user_name: 'lolitapomegranate@gmail.com',
+	# 	password: 'devteam12'
+	# }
 end
