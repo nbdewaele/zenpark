@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171011152241) do
+ActiveRecord::Schema.define(version: 20171011215911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,6 +30,39 @@ ActiveRecord::Schema.define(version: 20171011152241) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_installs_on_email", unique: true
     t.index ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.string "listing_name"
+    t.text "summary"
+    t.string "address"
+    t.integer "price"
+    t.boolean "active"
+    t.bigint "user_id"
+    t.string "print_in_person"
+    t.string "email_print_pickup"
+    t.string "email_print_dropoff"
+    t.string "email_print_mail_off"
+    t.string "copy"
+    t.string "photo_print"
+    t.boolean "is_laser"
+    t.boolean "is_ink"
+    t.boolean "is_laminate"
+    t.boolean "is_blackwhite"
+    t.boolean "is_color"
+    t.boolean "is_double_sided"
+    t.boolean "is_stapled"
+    t.boolean "is_paperclipped"
+    t.boolean "is_envelope"
+    t.boolean "is_manilla"
+    t.boolean "is_three_hole_punch"
+    t.string "is_proofing"
+    t.boolean "is_mailed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "paper_service"
+    t.string "accommodate"
+    t.index ["user_id"], name: "index_listings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -59,4 +92,5 @@ ActiveRecord::Schema.define(version: 20171011152241) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "listings", "users"
 end
