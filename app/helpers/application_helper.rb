@@ -4,7 +4,7 @@ module ApplicationHelper
 			"http://graph.facebook.com/#{user.uid}/picture?type=large"
 		else
 			gravatar_id = Digest::MD5::hexdigest(user.email).downcase
-			return "https://www.gravatar.com/avatar/#{gravatar_id}.jpg?d=identical&s=150wncase"
+			return "https://www.gravatar.com/avatar/#{gravatar_id}.jpg?d=identical&s=150"
 		end
 	end
 end
