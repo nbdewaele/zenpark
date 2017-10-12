@@ -1,8 +1,37 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= stylesheet_link_tag 'home' %>
 
-<%= link_to "Become A Host", new_user_registration_path %>
+<p class="header">Making it easy to be productive. <br> Whenever, wherever. </p>
 
 
-<%= link_to "Log In",
-new_user_session_path %>
+<div id="box" style="display: inline-block;">
+  <div id="underbox">
+    <h3>COMMUNITY</h3>
+    <p> Support your local community <br> 
+    and get a local workspace. </p>
+  </div>
+</div>
+
+<div id="box" style="display: inline-block;">
+  <div id="underbox">
+    <h3>FLEXIBILITY</h3>
+    <p> Dont wan't to go to the office today? 
+    	<br> Is FedEx a far drive? 
+      Need a mental <br> break? Find a local place <br> to get all your work done.   </p>
+  </div>
+</div>
+
+<div id="box" style="display: inline-block;">
+  <div id="underbox">
+    <h3>PRODUCTIVITY</h3>
+    <p> It has been proven that <br> workplace comfort affects important predictors <br> of operational efficiency <br> job satisfaction, <br> well-being, and <br> worker health.</p>
+  </div>
+</div>
+
+
+
+<br>
+
+ <%= link_to "START NOW", new_user_registration_path, :class => 'btn btn-primary btn-lg' %>
+
+
+

@@ -2,14 +2,19 @@
 @import "bootstrap";
 @import "toastr";
 
+
 body {
 	color: #565a5c;
-	background-color: #F8F8F8;
-	font-family: "Varela Round", "Helvetica Nue", "Helvetica", "Arial", sans-serif;
+	background-color: #B8C7E9;
+	font-family: 'PT Sans', sans-serif;
 }
 
 a {
-	color: #00A699;
+	color: white;
+}
+
+li {
+	color: white;
 }
 
 .container {
@@ -21,11 +26,11 @@ a {
 }
 //NAVBAR
 .navbar-default {
-	background-color: #FFFFFF;
+	background-color: #566DA0;
 }
 
 .navbar-default, .navbar-brand {
-	color: #FF5A5F;
+	color: white;
 	font-size: 2em;
 	font-weight: 400;
 }
@@ -231,4 +236,37 @@ a {
 	color: #565A5C;
 	font-weight: bold;
 	text-decoration: none;
+}
+
+a.navbar-brand {
+padding-left:13em;
+font-size: 20px;
+font-weight: bold;
+font-family: 'Cabin Sketch', cursive;
+}
+
+li {
+	font-size: px;
+}
+
+.text-center {
+	color: white;
+}
+
+.row {
+	background: grey;
+	opacity: .6;
+	  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+.newbody {
+	background: url("loft.jpg");
+	background-size: 900px 500px;
+}
+
+h3 {
+	font-family: 'Cabin Sketch', cursive;
+
 }

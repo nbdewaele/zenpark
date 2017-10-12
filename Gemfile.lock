@@ -90,6 +90,8 @@ GEM
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     formatador (0.2.5)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
@@ -287,6 +289,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   factory_girl_rails
+  font-awesome-rails
   guard-rspec
   jbuilder (~> 2.5)
   jquery-rails
