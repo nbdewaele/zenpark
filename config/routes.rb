@@ -1,5 +1,25 @@
 Rails.application.routes.draw do
 
+  get 'listing/index'
+
+  get 'listing/new'
+
+  get 'listing/create'
+
+  get 'listing/listing_one'
+
+  get 'listing/pricing_one'
+
+  get 'listing/description_one'
+
+  get 'listing/photo_upload_one'
+
+  get 'listing/amenities_one'
+
+  get 'listing/location_one'
+
+  get 'listing/update'
+
 	root 'pages#home'
 
   devise_for :users,
