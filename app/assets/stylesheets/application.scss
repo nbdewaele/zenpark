@@ -30,7 +30,7 @@ li {
 }
 
 .navbar-default, .navbar-brand {
-	color: white;
+	color: white !important;
 	font-size: 2em;
 	font-weight: 400;
 }
@@ -310,3 +310,9 @@ h3 {
 	 color: rgba(0,0,0,0.45);
 	 font-size: 14px;
  }
+
+a {
+
+	color:white !important;
+	font-size: 20px;
+}
