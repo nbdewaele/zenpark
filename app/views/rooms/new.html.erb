@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Create Your Shared Office
+	</div>
+	<div class="panel-body">
+		<div class="container">
+
+			<% form_for @room do |f| %>
+
+				<div class="row">
+					<div class="col-md-4 select">
+						<div class="form-group">
+							<label for="">Home Type</label>
+							<%= f.select :home_type, [["House", "House"], ["Apartment", "Apartment"], ["Other", "Other"]],
+							id: "home_type", prompt: "Select...", class: "form-control"  %>
+						</div>
+					</div>
+
+					<div class="col-md-4 select">
+						<div class="form-group">
+							<label for="">Office Type</label>
+							<%= f.select :room_type, [["Living Room", "Living Room"], ["Dining Room", "Dining Room"], ["Private Room", "Private Room"], ["Other", "Other"]],
+							id: "room_type", prompt: "Select...", class: "form-control"  %>
+						</div>
+					</div>
+
+					<div class="col-md-4 select">
+						<div class="form-group">
+							<label for="">Accommodate</label>
+							<%= f.select :home_type, [["1", 1], ["2", 2], ["3", 3], ["4+", 4]],
+							id: "accommodate", prompt: "Select...", class: "form-control"  %>
+						</div>
+					</div>
+				</div>
+				<div><%= f.submit "Create My Office", class: "btn btn-normal" %></div>
+			<% end %>
+		</div>
+	</div>
+</div>
