@@ -44,7 +44,9 @@ class RoomsController < ApplicationController
   end
 
   def update
-		if @room.update(room_params)
+		new_params = room_params
+		new_params = room_params.merge(active: true) if is_ready_room
+		if @room.update(new_params)
 			flash[:alert] = "Saved..."
 		else
 			redirect_back(fallback_location: request.referer)
@@ -60,6 +62,9 @@ class RoomsController < ApplicationController
 			redirect_to root_path, alert: "You don't have permission" unless current_user.id == @room.user_id
 		end
 
+		def is_ready_room
+			!@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? && !@room.description.blank?
+		end
 
 		def room_params
 			params.require(:room).permit(:home_type, :room_type, :accomodate, :listing_name, :summary, :address, :is_tv, :is_quiet,
