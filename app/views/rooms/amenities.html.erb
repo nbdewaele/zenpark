@@ -1,0 +1,72 @@
+<div class="row">
+	<div class="col-md-3">
+		<%= render 'room_menu' %>
+	</div>
+	<div class="col-md-9">
+		<div class="panel panel-default">
+
+			<div class="panel-heading">
+				Amenities
+			</div>
+
+			<div class="panel-body">
+				<div class="container">
+					<%= form_for @room do |f| %>
+
+					<div class="row form-group">
+						<div class="col-md-4">
+							<%= f.check_box :is_tv %> TV
+						</div>
+						<div class="col-md-4">
+							<%= f.check_box :is_quiet %> Quiet
+						</div>
+						<div class="col-md-4">
+							<%= f.check_box :is_coffee_tea %> Coffee/Tea
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-4">
+							<%= f.check_box :is_snacks %> Snacks
+						</div>
+						<div class="col-md-4">
+							<%= f.check_box :is_wifi %> Wifi
+						</div>
+						<div class="col-md-4">
+							<%= f.check_box :is_bw_printing %> Black and White Printing
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-4">
+							<%= f.check_box :is_color_printing %> Color Printing
+						</div>
+						<div class="col-md-4">
+							<%= f.check_box :is_bw_copying %> Black and White Printing
+						</div>
+						<div class="col-md-4">
+							<%= f.check_box :is_color_copying %> Color Printing
+						</div>
+					</div>
+
+					<div class="row form-group">
+						<div class="col-md-4">
+							<%= f.check_box :is_pet_friendly %> Pets Allowed
+						</div>
+						<div class="col-md-4">
+							<%= f.check_box :is_parking %> Onsite Parking
+						</div>
+						<div class="col-md-4">
+							<%= f.check_box :is_fridge %> Refrigerator
+						</div>
+					</div>
+					<br>
+					<div class="text-center">
+						<%= f.submit "Save", class: "btn btn-form" %>
+					</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

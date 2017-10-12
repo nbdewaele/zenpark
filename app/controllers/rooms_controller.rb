@@ -1,4 +1,4 @@
-class RoomController < ApplicationController
+class RoomsController < ApplicationController
 	before_action :set_room, except [:index, :new, :create]
 
 	before_action :authenticate_user!, except: [:show]
