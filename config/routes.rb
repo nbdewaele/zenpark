@@ -12,12 +12,13 @@ Rails.application.routes.draw do
 		member do
 			get 'listing'
 			get 'pricing'
-			get 'description'
+			get 'summary'
 			get 'photo_upload'
 			get 'amenities'
 			get 'location'
 		end
 		resources :photos, only: [:create, :destroy]
+		resources :reservations, only: [:create]
 	end
   # devise_for :installs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
