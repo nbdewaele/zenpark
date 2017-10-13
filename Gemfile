@@ -67,3 +67,4 @@ gem 'omniauth', '~> 1.7.1'
 gem 'dotenv-rails'
 gem "paperclip", "~> 5.0.0"
 gem 'geocoder'
+gem 'jquery-ui-rails'
