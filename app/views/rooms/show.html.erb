@@ -52,7 +52,7 @@
 		<!-- about -->
 		<div class="row">
 			<div class="col-md-12">
-				<p><%= @room.description %></p>
+				<p><%= @room.summary %></p>
 			</div>
 		</div>
 		<hr>
@@ -68,7 +68,7 @@
 					<div class="col-md-6">
 						<ul class="amenities">
 							<li>"<%= 'text-line-through' if !@room.is_tv %>">TV</li>
-							<li>"<%= 'text-line-through' if !@room.is_pets_friendly %>">Pet Friendly</li>
+							<li>"<%= 'text-line-through' if !@room.is_pet_friendly %>">Pet Friendly</li>
 							<li>"<%= 'text-line-through' if !@room.is_parking %>">On Site Parking</li>
 						</ul>
 					</div>
@@ -88,7 +88,7 @@
 					</div>
 					<div class="col-md-6">
 						<ul class="amenities">
-							<li>"<%= 'text-line-through' if !@room.is_Color_printing %>">Color Printer</li>
+							<li>"<%= 'text-line-through' if !@room.is_color_printing %>">Color Printer</li>
 							<li>"<%= 'text-line-through' if !@room.is_bw_copying %>">Black &amp; White Copier</li>
 							<li>"<%= 'text-line-through' if !@room.is_color_copying %>">Color Copier</li>
 						</ul>

@@ -12,7 +12,7 @@
 	</li>
 
 	<li class="sidebar-item">
-		<%= link_to "Description", description_room_path, class: "sidebar-link active" %><% if !@room.description.blank? %>
+		<%= link_to "Description", description_room_path, class: "sidebar-link active" %><% if !@room.summary.blank? %>
 		<span class="pull-right text-babu"><i class="fa fa-check"></i></span>
 		<% end %>
 	</li>
@@ -26,7 +26,6 @@
 	<li class="sidebar-item">
 		<%= link_to "Amenities", amenities_room_path, class: "sidebar-link active" %>
 		<span class="pull-right text-babu"><i class="fa fa-check"></i></span>
-		<% end %>
 	</li>
 
 	<li class="sidebar-item">
@@ -37,7 +36,7 @@
 </ul>
 <hr>
 
-<% is_ready = !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? && !@room.description.blank? %>
+<% is_ready = !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? && !@room.summary.blank? %>
 <%= form_for @room do |f| %>
 	<%= f.hidden_field :active, value: true %>
 	<%= f.submit "Publish", id: "publish_button", class: "btn btn-normal btn-block", disabled: !is_ready %>

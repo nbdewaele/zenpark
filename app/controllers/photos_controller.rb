@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
 
 		if params[:images]
 			params[:images].each do |img|
-				@rooms.photos.create(image: img)
+				@room.photos.create(image: img)
 			end
 
 			@photos = @room.photos
