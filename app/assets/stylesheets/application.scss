@@ -26,7 +26,7 @@ li {
 }
 //NAVBAR
 .navbar-default {
-	background-color: #566DA0;
+	background-color: #333333;
 }
 
 .navbar-default, .navbar-brand {
@@ -61,7 +61,7 @@ li {
 	width: 100%;
 	border-color: #c4c4c4;
 	background-color: white;
-	color: #484848;
+	color: black;
 	border-radius: 2px;
 	padding: 10px 0;
 	margin-top: 10px;
@@ -240,7 +240,7 @@ li {
 }
 
 a.navbar-brand {
-padding-left:13em;
+padding-left:15em;
 font-size: 20px;
 font-weight: bold;
 font-family: 'Cabin Sketch', cursive;
@@ -266,10 +266,13 @@ li {
 .newbody {
 	background: url("loft.jpg");
 	background-size: 900px 500px;
+	background-repeat: no-repeat;
+
 }
 
 h3 {
 	font-family: 'Cabin Sketch';
+	font-size: 20px !important;
 }
 .btn-file {
 	position: relative;
@@ -314,6 +317,31 @@ h3 {
 
 a {
 
-	color:white !important;
+	color: white !important;
 	font-size: 20px;
 }
+
+/* Edit Profile */
+
+.profilebackground {
+	background: url("paper.jpg");
+   background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+p.editprofile,  {
+	text-align: center;
+	color: white;
+	font-family: 'Cabin Sketch', cursive;
+	}
+
+.panel-heading {
+	text-align: center;
+	color: white;
+	font-family: 'Cabin Sketch', cursive;
+}
+
+
+

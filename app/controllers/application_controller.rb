@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
 
 	before_action :configure_permitted_parameters, if: :devise_controller?
 
+	def confirmation_url(resource, confirmation_token)
+		new_user_session_path+"?confirmation_token=#{confirmation_token}"
+	end
+# http://example.com/confirmation?confirmation_token=srsskLV35zxAfNpkaFJG
 	protected
 
 	def configure_permitted_parameters

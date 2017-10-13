@@ -1,8 +1,10 @@
 body {
 
 	background: url("livingroom.jpg");
-	background-size: 900px 700px;
-
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 @import "bourbon";
@@ -17,8 +19,8 @@ div {
 
 .header {
 	font-size: 30px;
-	color: #4A5062;
-	opacity: 0.5;
+	color: #566DA0;
+	opacity: 0.8;
 }
 #box {
   border-radius: 50%;
@@ -41,31 +43,6 @@ div {
   position: absolute;
 }
 
-#underbox h3, #underbox p {
-  transform: scale(0);
-  opacity: 0;
-  transition: all 0.6s ease;
-  color: white;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 3px rgba(black, 0.5);
-}
-
-#underbox:hover {
-    background: rgba(black, 0.5);
-}
-
-#underbox:hover h3, #underbox:hover p {
-  transform: scale(1);
-  opacity: 1;
-}
-
-#underbox h3 {
-   margin-top: 65px; 
-}
-
-#box:hover #underbox {
-    box-shadow: inset 0px 0px 0px 0px rgba(black, 0.3);
-}
 
 
 
@@ -76,7 +53,7 @@ div {
 }
 
 p {
-	font-size: 9px;
+	font-size: 10px;
 	font-weight: bold;
 }
 

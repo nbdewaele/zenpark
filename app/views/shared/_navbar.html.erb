@@ -8,7 +8,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<%= link_to "Escher", root_path, class: "navbar-brand" %>
+			<a class="navbar-brand" href="/">ESCHER</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class= "nav navbar-nav navbar-right">
@@ -33,6 +33,7 @@
 								<li><%= link_to "Your Reservations", your_reservations_path %></li>
 								<li><%= link_to "Your Office Plans", your_trips_path %></li>
 								<li role="separator" class="divider"></li>
+							<li role="separator" class="divider"></li>
 
 								<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
 								<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
