@@ -11,6 +11,13 @@
 			<a class="navbar-brand" href="/">ESCHER</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
+
+			<%= form_tag search_path, class: "navbar-form navbar-left", method: :get do %>
+				<div class="form-group">
+					<%= text_field_tag :search, params[:search], placeholder: "Anywhere", class: "form-control" %>
+				</div>
+			<% end %>
+
 			<ul class= "nav navbar-nav navbar-right">
 				<li>
 					<button class="btn btn-form btn-small">
@@ -19,7 +26,6 @@
 				</li>
 				<ul class="nav navbar-nav navbar-right">
 					<% if (!user_signed_in?) %>
-						<li></li>
 						<li><%= link_to "LOGIN", new_user_session_path %></li>
 					<% else %>
 						<li class="dropdown">
