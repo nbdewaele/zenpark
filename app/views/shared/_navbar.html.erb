@@ -8,18 +8,9 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-<<<<<<< HEAD
 			<a class="navbar-brand" href="/">ESCHER</a>
-=======
-			<%= link_to "Escher", root_path, class: "navbar-brand" %>
->>>>>>> ab6bcdde9cd8443f3edf4ba6c70ddb0aaffe169c
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
-			<li>
-				<button class="btn btn-form btn-small">
-					<%= link_to "Become A Host", new_room_path, style: "color: white; text-decoration: none;" %>
-				</button>
-			</li>
 			<ul class="nav navbar-nav navbar-right">
 				<% if (!user_signed_in?) %>
 					<li></li>
@@ -27,21 +18,19 @@
 				<% else %>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-							<%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
+							<%= image_tag avatar_url(current_user), class: "img-circle avatar-small", alt:"😎" %>&nbsp;
 							<%= current_user.fullname %> <span class="caret"></span>
 						</a>
 						<ul class="dropdown-menu">
-<<<<<<< HEAD
 							<li><a class="navbarelements" href="#">Manage Listings</a></li>
 							<li><a class="navbarelements" href="#">List Your Space</a></li>
 							<li><a class="navbarelements" href="#">Your Reservations</a></li>
 							<li><a class="navbarelements" href="#">Your Trips</a></li>
-=======
+
 							<li><%= link_to "Manage Listing", rooms_path %></li>
 							<li><%= link_to "List Your Space", new_room_path %></li>
 							<li><%= link_to "Your Reservations", your_reservations_path %></li>
 							<li><%= link_to "Your Office Plans", your_trips_path %></li>
->>>>>>> ab6bcdde9cd8443f3edf4ba6c70ddb0aaffe169c
 							<li role="separator" class="divider"></li>
 
 							<li><%= link_to "Edit Profile", edit_user_registration_path %></li>

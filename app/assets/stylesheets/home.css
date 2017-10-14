@@ -1,6 +1,6 @@
 body {
 
-	background: url("livingroom.jpg");
+	background: url("rami.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -23,7 +23,6 @@ div {
 	opacity: 0.8;
 }
 #box {
-  border-radius: 50%;
   height: 200px;
   width: 200px;
   overflow: hidden;
