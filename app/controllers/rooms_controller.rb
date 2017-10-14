@@ -49,6 +49,7 @@ class RoomsController < ApplicationController
   def update
 		new_params = room_params
 		new_params = room_params.merge(active: true) if is_ready_room
+
 		if @room.update(new_params)
 			flash[:alert] = "Saved..."
 			redirect_back(fallback_location: request.referer)
@@ -56,6 +57,17 @@ class RoomsController < ApplicationController
 			redirect_back(fallback_location: request.referer)
 		end
   end
+
+	# RESERVATIONS
+	def preload
+		today = Date.today
+		reservations = @room.reservations.where("start_date >= ? OR end_date >= ?", today, today)
+
+		time_block = Time.time_block
+		reservations = @room.reservations.where("start_time >= ? OR end_time >= ?", time_block, time_block)
+
+		render json: reservations
+	end
 
 	########
 	####NEEDS REDIRECT AFTER COMPLETION
