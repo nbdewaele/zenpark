@@ -1,7 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
-
+@import "font-awesome";
 
 
 body {
@@ -11,11 +11,11 @@ body {
 }
 
 a {
-	color: white;
+	color: #A79AB2;
 }
 
 li {
-	color: white;
+	color: #A79AB2;
 }
 
 .container {
@@ -27,13 +27,20 @@ li {
 }
 //NAVBAR
 .navbar-default {
-	background-color: #24232B;
+	background-color: #31988D;
+	height: 115px;
 }
 
 .navbar-default, .navbar-brand {
-	color: white !important;
+	color: #A79AB2 !important;
 	font-size: 2em;
 	font-weight: 400;
+}
+
+.dropdown-toggle {
+	position: relative;
+	bottom: 60px;
+	left: 20px;
 }
 //Buttons
 .btn-block {
@@ -61,7 +68,7 @@ li {
 .btn.btn-default {
 	width: 100%;
 	border-color: #c4c4c4;
-	background-color: #150F13;
+	background-color: #73C1C6;
 	color: white !important ;
 	border-radius: 2px;
 	padding: 10px 0;
@@ -82,7 +89,7 @@ li {
 //
 .btn.btn-form {
 	border: 1px solid #00A699;
-	background-color: #00A699;
+	background-color: #73C1C6;
 }
 
 .btn.btn-form:active {
@@ -225,7 +232,7 @@ li {
 }
 
 .sidebar-link {
-	color: #82888a;
+	color: white;
 	text-decoration: none;
 }
 
@@ -241,12 +248,26 @@ li {
 }
 
 a.navbar-brand {
-padding-left:15em;
-font-size: 20px;
+/*padding-left:15em;
+*/font-size: 20px;
 font-weight: bold;
 font-family: 'Cabin Sketch', cursive;
+position: relative;
+right: 60px;
 }
 
+.searchbar {
+	padding-left: 12em;
+	position: relative;
+	bottom: 65px;
+	left: 60px;
+}
+.anywhere {
+	position: relative;
+	top: 11px ;
+	color:black;
+	font-size: 20px;
+}
 // li {
 // 	font-size: px;
 // }
@@ -256,12 +277,13 @@ font-family: 'Cabin Sketch', cursive;
 }
 
 .row {
-	background: #24232B;
-	opacity: .6;
+	background: grey;
+	opacity: 0.7;
 	width: 400px;
   margin: 16px auto;
   font-size: 16px;
 	position: center;
+	border-radius: 10%;
 }
 
 .newbody {
@@ -351,7 +373,6 @@ p.editprofile,  {
 	font-family: 'Cabin Sketch', cursive;
 }
 
-<<<<<<< HEAD
 .viewmyprofile {
 	padding-bottom: 2.5em;
 }
@@ -369,14 +390,13 @@ a.navbarelements {
   color: white;
   /*background-color: transparent;*/
   background-color: gray;
-=======
+}
 // RESERVATIONS
 .reservation-table {
 	width: 100%;
 	border: none;
 	border-bottom: 1px solid #dce0e0;
 	padding: 10px;
->>>>>>> 9d7a2eb75267f3b9613393d9ca3c20d9c7eddf3a
 }
 
 .reservation-table .total td {
@@ -421,6 +441,12 @@ a.navbarelements {
 .map_price {
 	text-align: center;
 	font-size: 16px;
-	font:weight: 600;
+	font-weight: 600;
 	color: #00A699;
+}
+
+.logo {
+position: relative;
+right: 20px;
+padding-top:1.8em;
 }

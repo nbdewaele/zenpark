@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag 'home' %>
 
-<p class="header">Making it easy to be productive. <br> Whenever, wherever. </p>
-
+<!-- <p class="header"> Making it easy to be productive. Whenever, wherever. </p>
+ -->
 
 <div id="box" style="display: inline-block;">
   <div id="underbox">
@@ -31,19 +31,19 @@
 
 <br>
 
- <%= link_to "START NOW", new_user_registration_path, :class => 'btn btn-primary btn-lg' %>
-
-
+<!--  <%= link_to "START NOW", new_user_registration_path, :class => 'btn btn-primary btn-lg' %>
+ -->
+<!-- 
 COMMENT GETBACK
- ADDED BY NATE PER TUTORIAL WE CAN USE SOME OF THIS AND SCRAP WHAT WE DONT WANT
+ ADDED BY NATE PER TUTORIAL WE CAN USE SOME OF THIS AND SCRAP WHAT WE DONT WANT -->
 <%= form_tag search_path, method: :get do %>
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-md-6">
 			<%= text_field_tag :search, params[:search], placeholder: "Where would you like to work?", class: "form-control" %>
 		</div>
 		<div class="col-md-3">
-			<%= text_field_tag :search, params[:search], placeholder: "Where would you like to work?", class: "form-control datepicker" %>
-		</div>
+			<%= text_field_tag :search, params[:search], placeholder: "Where would you like to work?", class: "form-control datepicker" %> -->
+	<!-- 	</div>
 		 MIGHT NEED datepicker INSTEAD
 		<div class="col-md-3">
 			<%= text_field_tag :start_time, params[:start_time], placeholder: "What time do you want to start?", class: "form-control timepicker" %>
@@ -52,23 +52,22 @@ COMMENT GETBACK
 			<%= text_field_tag :end_time, params[:end_time], placeholder: "What time are you working till?", class: "form-control timepicker" %>
 		</div>
 	</div>
-	<br>
+ -->	<br>
 
-	<div class="row">
+<!-- 	<div class="row">
 		<div class="col-md-offset-4 col-md-4">
 			<%= submit_tag "Search", class: "btn btn-normal btn-block" %>
 		</div>
-	</div>
+	</div> -->
 	<% end %>
 	<br><hr><br>
 
-HOMES COMMENT
-
-<div><h3>HOMES</h3></div>
-<br>
+<!-- HOMES COMMENT
+ -->
 
 
- <div class="row">
+
+<!--  <div class="row">
 	 <% @rooms.each do |room| %>
 		 <div class="col-md-4">
 			 <div class="panel panel-default">
@@ -81,10 +80,10 @@ HOMES COMMENT
 			 </div>
 		 </div>
 	 <% end %>
- </div>
+ </div> -->
 
 <!-- GETBACK - Adjust and add timepicker -->
- <script>
+<!--  <script>
 	 $('#start_date').datepicker({
 		 dateFormat: 'dd-mm-yy',
 		 minDate: 0,
@@ -120,4 +119,4 @@ HOMES COMMENT
 	 		$('#start_time').datepicker("option", "maxTime", selected);
 	 	}
 	 });
- </script>
+ </script> -->

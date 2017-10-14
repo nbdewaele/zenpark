@@ -8,7 +8,7 @@ body {
 }
 
 @import "bourbon";
-
+@import "font-awesome";
 
 
 div {
@@ -18,19 +18,20 @@ div {
 }
 
 .header {
-	font-size: 30px;
-	color: #566DA0;
-	opacity: 0.8;
+	font-size: 20px;
+	color: #A79AB2;
+  font-weight: bold;
 }
 #box {
   height: 200px;
   width: 200px;
   overflow: hidden;
   box-sizing: border-box;
-  background-color: black;
+  background-color: #A79AB2;
   box-shadow: inset 0px 0px 3px 9px rgba(black, 0.3);
   position: relative;
-  opacity: 0.5;
+  border-radius: 9%;
+  opacity: .8;
 }
 
 #underbox {
@@ -47,8 +48,8 @@ div {
 
 .btn {
 	color: white;
-	opacity: .9;
-	background-color: #566DA0;
+	background-color: #73C1C6;
+  border: none;
 }
 
 p {
@@ -59,3 +60,5 @@ p {
 h3 {
 	font-size: 30px;
 }
+
+
