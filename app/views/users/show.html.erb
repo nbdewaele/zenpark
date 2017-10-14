@@ -3,6 +3,7 @@
 		<div class="center">
 			<%= image_tag avatar_url(@user), class: "avatar-full" %>
 		</div>
+
 		<div class="panel panel-default">
 			<div class="panel panel-heading">Verification</div>
 			<div class="panel-body">
@@ -40,7 +41,7 @@
 							<%= image_tag room.cover_photo(:medium) %>
 						</div>
 						<div class="panel body">
-							<%= link_to room.listing.name, room %>
+							<%= link_to room.listing_name, room %>
 						</div>
 					</div>
 				</div>
