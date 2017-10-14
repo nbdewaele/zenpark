@@ -6,9 +6,9 @@ class Room < ApplicationRecord
 	geocoded_by :address
 	after_validation :geocode, if: :address_changed?
 
-	validates :home_type, presence: true
-	validates :room_type, presence: true
-	validates :accommodate, presence: true
+	# validates :home_type, presence: true
+	# validates :room_type, presence: true
+	# validates :accommodate, presence: true
 
 	def cover_photo(size)
 		if self.photos.length > 0
