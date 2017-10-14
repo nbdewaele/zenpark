@@ -14,11 +14,10 @@ class RoomsController < ApplicationController
 
   def create
 		@room = current_user.rooms.build(room_params)
-		if @room.save
+		if @room.save!
 			redirect_to listing_room_path(@room), notice: "Saved..."
 		else
 			flash[:alert] = "Something went wrong..."
-			raise @room
 			render :new
 		end
   end
@@ -85,26 +84,27 @@ class RoomsController < ApplicationController
 	#######
 	private
 
-		#RE DATEPICKER - NEED TIME PICKER
-		def is_conflict(start_date, end_date, room)
-			check = room.reservations.where("? < start_date AND end_date < ?", start_date, end_date)
-			check.size > 0? true : false
+	#RE DATEPICKER - NEED TIME PICKER
+	def is_conflict(start_date, end_date, room)
+		check = room.reservations.where("? < start_date AND end_date < ?", start_date, end_date)
+		check.size > 0 ? true : false
+	end
 
-		def set_room
-			@room = Room.find(params[:id])
-		end
+	def set_room
+		@room = Room.find(params[:id])
+	end
 
-		def is_authorized
-			redirect_to root_path, alert: "You don't have permission" unless current_user.id == @room.user_id
+	def is_authorized
+		redirect_to root_path, alert: "You don't have permission" unless current_user.id == @room.user_id
 
-		end
+	end
 
-		def is_ready_room
-			!@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? && !@room.summary.blank?
-		end
+	def is_ready_room
+		!@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? && !@room.summary.blank?
+	end
 
-		def room_params
-			params.require(:room).permit(:home_type, :room_type, :accommodate, :listing_name, :summary, :address, :is_tv, :is_quiet,
-       :is_coffee_tea, :is_snacks, :is_wifi, :is_bw_printing, :is_color_printing, :is_bw_copying, :is_color_copying, :is_pet_friendly, :is_fridge, :is_parking, :price, :active)
-		end
+	def room_params
+		params.require(:room).permit(:home_type, :room_type, :accommodate, :listing_name, :summary, :address, :is_tv, :is_quiet,
+     :is_coffee_tea, :is_snacks, :is_wifi, :is_bw_printing, :is_color_printing, :is_bw_copying, :is_color_copying, :is_pet_friendly, :is_fridge, :is_parking, :price, :active)
+	end
 end

@@ -1,5 +1,6 @@
 <!-- Static navbar -->
 <nav class="navbar navbar-default navbar-static-top">
+<<<<<<< HEAD
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -46,3 +47,47 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
+=======
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">ESCHER</a>
+		</div>
+		<div id="navbar" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<% if (!user_signed_in?) %>
+					<li></li>
+					<li><%= link_to "LOGIN", new_user_session_path %></li>
+				<% else %>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							<%= image_tag avatar_url(current_user), class: "img-circle avatar-small", alt:"😎" %>&nbsp;
+							<%= current_user.fullname %> <span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="navbarelements" href="#">Manage Listings</a></li>
+							<li><a class="navbarelements" href="#">List Your Space</a></li>
+							<li><a class="navbarelements" href="#">Your Reservations</a></li>
+							<li><a class="navbarelements" href="#">Your Trips</a></li>
+
+							<li><%= link_to "Manage Listing", rooms_path %></li>
+							<li><%= link_to "List Your Space", new_room_path %></li>
+							<li><%= link_to "Your Reservations", your_reservations_path %></li>
+							<li><%= link_to "Your Office Plans", your_trips_path %></li>
+							<li role="separator" class="divider"></li>
+
+								<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+								<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+							</ul>
+						</li>
+					<% end %>
+			</ul>
+		</div><!--/.nav-collapse -->
+	</div>
+</nav>
+>>>>>>> 447f2ca1ec751d55b214a27d42dbfe0edb3e8254
