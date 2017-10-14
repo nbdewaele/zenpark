@@ -11,6 +11,7 @@
 			<a class="navbar-brand" href="/">ESCHER</a>
 		</div>
 		<div id="navbar" class="navbar-collapse collapse">
+<<<<<<< HEAD
 			<ul class="nav navbar-nav navbar-right">
 				<% if (!user_signed_in?) %>
 					<li></li>
@@ -31,13 +32,43 @@
 							<li><%= link_to "List Your Space", new_room_path %></li>
 							<li><%= link_to "Your Reservations", your_reservations_path %></li>
 							<li><%= link_to "Your Office Plans", your_trips_path %></li>
+=======
+
+			<%= form_tag search_path, class: "navbar-form navbar-left", method: :get do %>
+				<div class="form-group">
+					<%= text_field_tag :search, params[:search], placeholder: "Anywhere", class: "form-control" %>
+				</div>
+			<% end %>
+
+			<ul class= "nav navbar-nav navbar-right">
+				<li>
+					<button class="btn btn-form btn-small">
+						<%= link_to "Become A Host", new_room_path, style: "color: white; text-decoration: none;" %>
+					</button>
+				</li>
+				<ul class="nav navbar-nav navbar-right">
+					<% if (!user_signed_in?) %>
+						<li><%= link_to "LOGIN", new_user_session_path %></li>
+					<% else %>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								<%= image_tag avatar_url(current_user), class: "img-circle avatar-small" %>&nbsp;
+								<%= current_user.fullname %> <span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><%= link_to "Manage Listing", rooms_path %></li>
+								<li><%= link_to "List Your Space", new_room_path %></li>
+								<li><%= link_to "Your Reservations", your_reservations_path %></li>
+								<li><%= link_to "Your Office Plans", your_trips_path %></li>
+								<li role="separator" class="divider"></li>
+>>>>>>> 9d7a2eb75267f3b9613393d9ca3c20d9c7eddf3a
 							<li role="separator" class="divider"></li>
 
-							<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-							<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-						</ul>
-					</li>
-				<% end %>
+								<li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+								<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+							</ul>
+						</li>
+					<% end %>
 			</ul>
 		</div><!--/.nav-collapse -->
 	</div>

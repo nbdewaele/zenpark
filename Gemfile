@@ -65,6 +65,11 @@ gem 'toastr-rails'
 gem 'omniauth-facebook'
 gem 'omniauth', '~> 1.7.1'
 gem 'dotenv-rails'
+#for adding photos
 gem "paperclip", "~> 5.0.0"
+#for maps
 gem 'geocoder'
+# for time and date picking
 gem 'jquery-ui-rails'
+#search capable
+gem 'ransack'
