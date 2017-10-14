@@ -246,9 +246,9 @@ font-weight: bold;
 font-family: 'Cabin Sketch', cursive;
 }
 
-li {
-	font-size: px;
-}
+// li {
+// 	font-size: px;
+// }
 
 .text-center {
 	color: white;
@@ -270,10 +270,11 @@ li {
 
 }
 
-h3 {
-	font-family: 'Cabin Sketch';
-	font-size: 20px !important;
-}
+// h3 {
+// 	font-family: 'Cabin Sketch';
+// 	font-size: 20px !important;
+// }
+
 .btn-file {
 	position: relative;
 	overflow: hidden;
@@ -315,6 +316,10 @@ h3 {
 	 font-size: 14px;
  }
 
+
+
+
+
 a {
 
 	color: white !important;
@@ -343,5 +348,49 @@ p.editprofile,  {
 	font-family: 'Cabin Sketch', cursive;
 }
 
+// RESERVATIONS
+.reservation-table {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #dce0e0;
+	padding: 10px;
+}
 
+.reservation-table .total td {
+	font-size: 16px;
+	font-weight: bold;
+	border: none;
+}
 
+.form-control.datepicker {
+	color: #00A699;
+	background-color: white;
+	border: 1px solid #00A699;
+	text-align: center;
+}
+
+.message-alert {
+	color: #d43242;
+	font-size: 14px;
+	padding-top: 10px;
+}
+
+// SEARCH
+#main {
+	height: 100%;
+	overflow: hidden;
+}
+
+#left {
+	padding: 10px 400px 10px 20px;
+	overflow: scroll;
+	height: 100%;
+}
+
+#right {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 450px;
+	height: 100%;
+}
