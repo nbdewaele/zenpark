@@ -1,3 +1,4 @@
+<% @room = defined?(room) ? room : @room %>
 <div class="panel panel-default">
 	<div class="panel-heading">
 		<span><i class="fa fa-bolt" style="color: #ffb400;"> $</i><%= @room.price %></span>
@@ -6,19 +7,35 @@
 	<div class="panel-body">
 		<%= form_for([@room, @room.reservations.new]) do |f| %>
 		<!-- WILL NEED TO REMOVE END DATE -->
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-md-6">
 					<label for="">Day</label>
 					<%= f.text_field :start_date, readonly: true, placeholder: "Date", class: "form-control datepicker" %>
 				</div>
-			</div>
+			</div> -->
 
-			<div class="row">
-				<div class="col-md-6">
-					<label for="">Day</label>
-					<%= f.text_field :end_date, readonly: true, placeholder: "End Date", class: "form-control datepicker" %>
-				</div>
-			</div>
+			<!-- NEEDS TO BE REMOVED OR FIXED -->
+			<div class="container">
+		    <div class="row">
+		        <div class='col-sm-6'>
+		            <div class="form-group">
+		                <div class='input-group date'>
+		                    <input type='text'  class="form-control" id="datetimepicker1" />
+		                    <span class="input-group-addon">
+		                        <span class="glyphicon glyphicon-calendar"></span>
+		                    </span>
+		                </div>
+		            </div>
+		        </div>
+		        <script type="text/javascript">
+		            // $(function () {
+		            //     $('#datetimepicker1').datetimepicker();
+		            // });
+		        </script>
+		    </div>
+		</div>
+
+
 			<div class="row">
 				<div class="col-md-6">
 					<label for="">Check In Time</label>
@@ -30,6 +47,9 @@
 					<label for="">Check Out Time</label>
 					<%= f.text_field :end_time, readonly: true, placeholder: "End Time", class: "form-control datepicker", disabled: true %>
 				</div>
+				<div class="col-md-3 checkout">
+				</div>
+				<!-- <%= f.submit %> -->
 			</div>
 
 			<h4="message-alert text-center"><span id="message"></span></h4>
@@ -56,13 +76,13 @@
 			</div>
 
 			<br>
-			<!-- WILL NEED TO REMOVE END DATES -->
+			WILL NEED TO REMOVE END DATES -->
 
-			<div class='col-xs-12' style="padding:0;">
+			<!-- <div class='col-xs-12' style="padding:0;">
 				<div class="form-group">
-					<div class='input-group date' id='datetimepicker1'>
+					<div class='input-group date' id='datetimepicker1'> -->
 						<!-- to be change :start_date to the attribute that you wish to save ein database -->
-						<%= f.text_field :start_date , class: 'form-control' %>
+						<!-- <%= f.text_field :start_date , class: 'form-control' %>
 						<span class="input-group-addon">
 							<span class="glyphicon glyphicon-calendar"></span>
 						</span>
@@ -80,7 +100,7 @@
 </div>
 
 
-<%= form_for([@room, @room.reservations.new]) do |f| %>
+<! <%= form_for([@room, @room.reservations.new]) do |f| %>
 	<%= f.text_field :start_date %>
 	<%= f.text_field :end_date %>
 	<%= f.text_field :start_time %>
@@ -91,6 +111,10 @@
 	<%= f.submit "Book now", class: "btn btn-normal btn-block" %>
 
 <% end %>
+
+END OFF COMMENTS EXPERIMENT -->
+
+
 
 <!-- <script>
 

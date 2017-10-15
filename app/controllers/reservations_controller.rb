@@ -24,7 +24,7 @@ class ReservationsController < ApplicationController
 			@reservation.save
 
 			flash[:notice] = "Booked Successfully!"
-			redirect to room
+			redirect_to your_reservations_path
 		end
 	end
 
@@ -34,6 +34,7 @@ class ReservationsController < ApplicationController
 
 	def your_reservations
 		@rooms = current_user.rooms
+		redirerct_to your_reservations_path
 	end
 
 	private

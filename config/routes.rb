@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 		end
 		resources :photos, only: [:create, :destroy]
 		resources :reservations, only: [:create]
+
+
 	end
   # devise_for :installs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -28,6 +30,7 @@ Rails.application.routes.draw do
 	get '/your_reservations' => 'reservations#your_reservations'
 	get 'search' => 'pages#search'
 	get 'rooms/index' => 'rooms#index'
-	get 'show/:id' => 'rooms#show'
+	get 'update' => 'rooms#update'
+
 
 end

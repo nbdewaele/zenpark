@@ -171,7 +171,10 @@
 	<!-- right panel -->
 	<div class="col-md-4">
 		<!-- reservation form -->
+		<% if @room.is_ready? %>
 		<%= render 'reservations/form' %>
+		<% end %>
+
 
 	</div>
 </div>

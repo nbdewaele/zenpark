@@ -22,7 +22,6 @@ class RoomsController < ApplicationController
 		end
   end
 
-
 	def show
 		@photos = @room.photos
 	end
@@ -31,6 +30,7 @@ class RoomsController < ApplicationController
   end
 
   def pricing
+		@price = @room.price
   end
 
   def summary
@@ -41,6 +41,7 @@ class RoomsController < ApplicationController
   end
 
   def amenities
+		
   end
 
   def location

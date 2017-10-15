@@ -24,3 +24,7 @@ $(function(){
 
 	google.maps.event.addDomListener(window, 'load');
 })
+
+$(function () {
+		$('#datetimepicker1').datetimepicker();
+});
