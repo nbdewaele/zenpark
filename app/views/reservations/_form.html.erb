@@ -57,12 +57,24 @@
 
 			<br>
 			<!-- WILL NEED TO REMOVE END DATES -->
-			<%= f.text_field :start_date %>
-			<%= f.text_field :end_date %>
-			<%= f.text_field :start_time %>
-			<%= f.text_field :end_time %>
+
+			<div class='col-xs-12' style="padding:0;">
+				<div class="form-group">
+					<div class='input-group date' id='datetimepicker1'>
+						<!-- to be change :start_date to the attribute that you wish to save ein database -->
+						<%= f.text_field :start_date , class: 'form-control' %>
+						<span class="input-group-addon">
+							<span class="glyphicon glyphicon-calendar"></span>
+						</span>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$(function () {
+					$('#datetimepicker1').datetimepicker();
+				});
+			</script>
 			<br>
-			<%= f.submit "Book Now", id: "btn_book" class: "btn btn-normal btn-block" disabled: true %>
+			<%= f.submit "Book Now", id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
 		<% end %>
 	</div>
 </div>
@@ -76,16 +88,16 @@
 
 	<br>
 
-	<%= f.submit "Book now" class: "btn btn-normal btn-block" %>
+	<%= f.submit "Book now", class: "btn btn-normal btn-block" %>
 
 <% end %>
 
-<script>
+<!-- <script>
 
-function checkDate(date) {
-	dmy = date = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
-	return [$.inArray(dmy, unavailableDates) == -1];
-}
+	function checkDate(date) {
+		dmy = date = date.getDate() + "-" + (date.getMonth() + 1) + "-" + date.getFullYear();
+		return [$.inArray(dmy, unavailableDates) == -1];
+	}
 
 $(function() {
 
@@ -136,7 +148,7 @@ $(function() {
 								$('#reservation_nights').text(nights);
 								$('#reservation_total').text(total);
 							}
-							}
+						}
 						}
 					});
 
@@ -187,15 +199,4 @@ $(function() {
 	});
 
 
-	// TILL WE GET TIMEPICKER
-// 	$('#reservation_start_time').timepicker({
-// 		timeFormat: 'hh:mm'
-// 	});
-// 	$('#reservation_start_time').timpicker({
-// 		timeFormat: 'hh:mm'
-// 	});
-// });
-
-
-
-</script>
+</script> -->

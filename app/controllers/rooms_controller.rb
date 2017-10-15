@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
 	before_action :set_room, except: [:index, :new, :create]
 
 	before_action :authenticate_user!, except: [:show]
-	before_action :is_authorized, only: [:listing, :pricing, :description, :photo_upload, :amenities, :location, :update]
+	before_action :is_authorized, only: [:listing, :pricing, :summary, :photo_upload, :amenities, :location, :update]
 
 	def index
 		@rooms = current_user.rooms
@@ -22,6 +22,7 @@ class RoomsController < ApplicationController
 		end
   end
 
+
 	def show
 		@photos = @room.photos
 	end
@@ -32,7 +33,7 @@ class RoomsController < ApplicationController
   def pricing
   end
 
-  def description
+  def summary
   end
 
   def photo_upload
@@ -43,6 +44,7 @@ class RoomsController < ApplicationController
   end
 
   def location
+		# redirect_to location_room_path
   end
 
   def update
@@ -51,7 +53,7 @@ class RoomsController < ApplicationController
 
 		if @room.update(new_params)
 			flash[:alert] = "Saved..."
-			redirect_back(fallback_location: request.referer)
+			redirect_to @room
 		else
 			redirect_back(fallback_location: request.referer)
 		end
@@ -92,6 +94,7 @@ class RoomsController < ApplicationController
 
 	def set_room
 		@room = Room.find(params[:id])
+
 	end
 
 	def is_authorized
@@ -100,11 +103,14 @@ class RoomsController < ApplicationController
 	end
 
 	def is_ready_room
-		!@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? && !@room.summary.blank?
+		return !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? && !@room.summary.blank?
 	end
 
 	def room_params
 		params.require(:room).permit(:home_type, :room_type, :accommodate, :listing_name, :summary, :address, :is_tv, :is_quiet,
      :is_coffee_tea, :is_snacks, :is_wifi, :is_bw_printing, :is_color_printing, :is_bw_copying, :is_color_copying, :is_pet_friendly, :is_fridge, :is_parking, :price, :active)
 	end
+	# def room_2_params
+	# 	params.require(:room).permit()
+	# end
 end

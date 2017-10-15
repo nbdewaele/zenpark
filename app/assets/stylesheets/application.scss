@@ -9,43 +9,9 @@ body {
 	font-family: 'PT Sans', sans-serif;
 }
 
-a {
-	color: white;
-}
-
-li {
-	color: white;
-}
-
-.container {
-	width: 80%;
-}
 
 .text-babu, .icon-babu {
 	color: #00A699;
-}
-//NAVBAR
-.navbar-default {
-	background-color: #333333;
-}
-
-.navbar-default, .navbar-brand {
-	color: white !important;
-	font-size: 2em;
-	font-weight: 400;
-}
-//Buttons
-.btn-block {
-	display: block;
-	white-space: normal;
-	width: 100%;
-}
-
-.btn {
-	color: #fff;
-	border-radius: 5px;
-	font-weight: bold;
-	padding: 9px 27px;
 }
 
 .btn-small {
@@ -53,19 +19,6 @@ li {
 	margin-top: 15px;
 }
 
-.btn:hover, .btn:focus {
-	color: #fff;
-}
-
-.btn.btn-default {
-	width: 100%;
-	border-color: #c4c4c4;
-	background-color: white;
-	color: black;
-	border-radius: 2px;
-	padding: 10px 0;
-	margin-top: 10px;
-}
 
 .btn.btn-normal {
 	border: 1px solid #ff5a5f;
@@ -148,15 +101,7 @@ li {
 	width: 100%;
 }
 // FORMS
-.form-group {
-	margin-bottom: 25px;
-	padding-left: 0;
-}
 
-.form-control {
-	border-radius: 2px;
-	height: 4rem;
-}
 
 .form-group input {
 	height: 45px;
@@ -239,12 +184,12 @@ li {
 	text-decoration: none;
 }
 
-a.navbar-brand {
-padding-left:15em;
-font-size: 20px;
-font-weight: bold;
-font-family: 'Cabin Sketch', cursive;
-}
+// a.navbar-brand {
+// 	padding-left:15em;
+// 	font-size: 20px;
+// 	font-weight: bold;
+// 	font-family: 'Cabin Sketch', cursive;
+// }
 
 // li {
 // 	font-size: px;
@@ -254,15 +199,6 @@ font-family: 'Cabin Sketch', cursive;
 	color: white;
 }
 
-.row {
-	background: grey;
-	opacity: .6;
-	width: 400px;
-  margin: 16px auto;
-  font-size: 16px;
-	position: center;
-}
-
 .newbody {
 	background: url("loft.jpg");
 	background-size: 900px 500px;
@@ -270,10 +206,6 @@ font-family: 'Cabin Sketch', cursive;
 
 }
 
-// h3 {
-// 	font-family: 'Cabin Sketch';
-// 	font-size: 20px !important;
-// }
 
 .btn-file {
 	position: relative;
@@ -317,15 +249,6 @@ font-family: 'Cabin Sketch', cursive;
  }
 
 
-
-
-
-a {
-
-	color: white !important;
-	font-size: 20px;
-}
-
 /* Edit Profile */
 
 .profilebackground {
@@ -340,7 +263,7 @@ p.editprofile,  {
 	text-align: center;
 	color: white;
 	font-family: 'Cabin Sketch', cursive;
-	}
+}
 
 .panel-heading {
 	text-align: center;

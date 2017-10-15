@@ -24,7 +24,10 @@ Rails.application.routes.draw do
 	end
   # devise_for :installs
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-	get'/your_trips' => 'reservations#your_trips'
-	get'/your_reservations' => 'reservations#your_reservations'
-	get'search' => 'pages#search'
+	get '/your_trips' => 'reservations#your_trips'
+	get '/your_reservations' => 'reservations#your_reservations'
+	get 'search' => 'pages#search'
+	get 'rooms/index' => 'rooms#index'
+	get 'show/:id' => 'rooms#show'
+
 end

@@ -3,7 +3,9 @@
 		<ul class="sidebar-list">
 			<li class="sidebar-item"><%= link_to "Your listings active", rooms_path, class: "sidebar-link" %></li>
 			<li class="sidebar-item"><%= link_to "Your Reservation", your_reservations_path, class: "sidebar-link active" %></li>
-			<li class="sidebar-item active"><%= link_to "Your Office Plans", your_trips_path, class: "sidebar-link active" %></li>
+			<li class="sidebar-item active">
+				<%= link_to "Your Office Plans", your_trips_path, class: "sidebar-link active" %>
+			</li>
 		</ul>
 	</div>
 
