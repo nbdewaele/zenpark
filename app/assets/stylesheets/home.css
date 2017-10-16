@@ -1,6 +1,6 @@
 body {
 
-	background: url("rami.jpg");
+	background: url("livingroom.jpg");
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -43,12 +43,87 @@ div {
   position: absolute;
 }
 
+.column-center, .column-right, .column-left {
+font-family: 'Playfair Display', serif;
+}
+
+.community {
+  font-size: 10px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.asymmetric {
+  position: relative;
+  background-color: #A79AB2;
+  opacity: .8;
+  height: 275px;
+  width: 700px;
+}
+
+.asymmetric::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #A79AB2;
+  transform-origin: top left;
+  transform: skewY(-3deg);
+  z-index: -10;
+}
+
+.asymmetric::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #A79AB2;
+  transform-origin: bottom left;
+  transform: skewY(3deg);
+  z-index: -10;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #EEEEEE;
+  font-family: sans-serif;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.blank-space {
+  height: 100px;
+}
+
+h2 {
+  margin: 0;
+  padding-bottom: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+
+p {
+  width: 70%;
+  margin: 0 auto;
+  line-height: 2;
+  font-size: 18px;
+}
+
+
+
+
 
 
 
 .btn {
 	color: white;
-	background-color: #73C1C6;
+	background-color: #31988D;
   border: none;
 }
 
@@ -62,3 +137,11 @@ h3 {
 }
 
 
+.moveit{
+  position: relative;
+  top: -110px;
+}
+
+h2{
+  font-size: 20px;
+}

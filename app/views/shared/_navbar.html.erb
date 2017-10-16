@@ -12,15 +12,17 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <%= form_tag search_path, class: "navbar-form navbar-left", method: :get do %>
-                     <button class="btn btn-form btn-small">
-                        <%= link_to "Become A Host", new_room_path, class: "host", style: "color: white; text-decoration: none;" %>
-                    </button>       
+                <div class="searchbar">
+                    
+                </div>
+                   
             <% end %>
             <ul class= "nav navbar-nav navbar-right">
                 <ul class="nav navbar-nav navbar-right">
                     <% if (!user_signed_in?) %>
                         <li><%= link_to "LOGIN", new_user_session_path %></li>
                     <% else %>
+                    
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <%=image_tag avatar_url(current_user), class: "img-circle avatar-small", alt:"😎" %>&nbsp;
@@ -55,7 +57,6 @@
 			<ul class="nav navbar-nav navbar-right">
 				<% if (!user_signed_in?) %>
 					<li></li>
-					<li><%= link_to "LOGIN", new_user_session_path %></li>
 				<% else %>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

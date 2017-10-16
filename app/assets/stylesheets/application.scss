@@ -28,7 +28,7 @@ li {
 //NAVBAR
 .navbar-default {
 	background-color: #31988D;
-	height: 115px;
+	height: 75px;
 }
 
 .navbar-default, .navbar-brand {
@@ -39,9 +39,10 @@ li {
 
 .dropdown-toggle {
 	position: relative;
-	bottom: 60px;
+	bottom: 1px;
 	left: 20px;
 }
+
 //Buttons
 .btn-block {
 	display: block;
@@ -108,6 +109,7 @@ li {
 	border-color: #2d467b;
 	background-color: #2d467b;
 }
+
 
 // PANELS
 .panel-default .panel-heading {
@@ -389,7 +391,7 @@ a.navbarelements {
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: white;
   /*background-color: transparent;*/
-  background-color: gray;
+  background-color: #31988D;
 }
 // RESERVATIONS
 .reservation-table {
@@ -447,8 +449,9 @@ a.navbarelements {
 
 .logo {
 position: relative;
-right: 20px;
-padding-top:1.8em;
+right: 25px;
+padding-top:1.9em;
+bottom: 20px;
 }
 
 .magnifyspan {
@@ -456,4 +459,28 @@ padding-top:1.8em;
 	right: 35px;
 	top: 12px;
 	color: black;
+}
+
+
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+
+
+.homecontainer {
+	background-color: #A79AB2;
+	opacity: .8;
+	height: 200px;
+	width: 700px;
+	position: absolute;
+	left: 70px;
+	border:1px solid white;
+}
+
+.sidebar-item{
+	text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+background-color: #31988D
 }
