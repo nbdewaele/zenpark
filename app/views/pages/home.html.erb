@@ -15,7 +15,7 @@
   <div id="underbox">
     <h3>FLEXIBILITY</h3>
     <p> Dont wan't to go to the office today?
-    	<br> Is FedEx a far drive?
+      <br> Is FedEx a far drive?
       Need a mental <br> break? Find a local place <br> to get all your work done.   </p>
   </div>
 </div>
@@ -27,23 +27,27 @@
   </div>
 </div>   -->
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900i" rel="stylesheet">
-<!--
+
 <div class="homecontainer">
    <div class="column-center">COMMUNITY <br>
-    <p class="community">
+    <p >
       Support your local economy.
-   </p> </div>
+   </p> 
+ </div>
    <div class="column-left">FLEXIBILITY <br>
-    <p class="flexibility">
+    <p>
 
-
+kjkdljfkdsjklfjsd
     </p>
 
    </div>
    <div class="column-right">PRODUCTIVITY</div>
-</div> -->
+   <p> 
+yes
+   </p>
+</div> 
 
-
+<!-- 
 <body>
   <div class="moveit">
   <section class="blank-space"></section>
@@ -75,7 +79,7 @@
   </section>
   <section class="blank-space"></section>
 </div>
-</body>
+</body> -->
 
 <% unless current_user %>
 
@@ -84,4 +88,91 @@
 <% end %>
 
 
+
+
+
+<!-- COMMENT GETBACK
+ ADDED BY NATE PER TUTORIAL WE CAN USE SOME OF THIS AND SCRAP WHAT WE DONT WANT
+<%= form_tag search_path, method: :get do %> -->
+  <!-- <div class="row">
+    <! <div class="col-md-6">
+      <%= text_field_tag :search, params[:search], placeholder: "Where would you like to work?", class: "form-control" %>
+    </div> -->
+    <!-- <div class="col-md-3">
+      <%= text_field_tag :search, params[:search], placeholder: "Where would you like to work?", class: "form-control datepicker" %>
+    </div>
+     MIGHT NEED datepicker INSTEAD
+    <div class="col-md-3">
+      <%= text_field_tag :start_time, params[:start_time], placeholder: "What time do you want to start?", class: "form-control timepicker" %>
+    </div>
+    <div class="col-md-3">
+      <%= text_field_tag :end_time, params[:end_time], placeholder: "What time are you working till?", class: "form-control timepicker" %>
+    </div>
+  </div>
+  <br> -->
+
+  <!-- <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <%= submit_tag "Search", class: "btn btn-normal btn-block" %>
+    </div>
+  </div> -->
+  <% end %>
+  <br><hr><br>
+
+
 <br>
+
+
+ <div class="row">
+   <% @rooms.each do |room| %>
+     <div class="col-md-4">
+       <div class="panel panel-default">
+         <div class="panel-heading preview">
+           <%= image_tag room.cover_photo(:small) %>
+         </div>
+         <div class="panel body">
+           <%= link_to room.listing_name, room %>
+         </div>
+       </div>
+     </div>
+   <% end %>
+ </div>
+
+<!-- GETBACK - Adjust and add timepicker -->
+ <script>
+   $('#start_date').datepicker({
+     dateFormat: 'dd-mm-yy',
+     minDate: 0,
+     maxDate: '1d',
+     onSelect: function(selected) {
+       $('#end_date').datepicker("option", "minDate", selected);
+       $('#end_date').attr("disabled", false);
+     }
+   });
+   $('#end_date').datepicker({
+     dateFormat: 'dd-mm-yy',
+     minDate: 0,
+     maxDate: '1d',
+     onSelect: function(selected) {
+       $('#end_date').datepicker("option", "maxDate", selected);
+     }
+   });
+
+   $('#start_time').timepicker({
+    timeFormat: 'hh:mm',
+    minTime: 0.5,
+    maxTime: '23',
+    onSelect: function(selected) {
+      $('#end_time').datepicker("option", "minTime", selected);
+      $('#end_time').attr("disabled", false);
+    }
+   });
+   $('#end_time').timepicker({
+    timeFormat: 'hh:mm',
+    minTime: 0.5,
+    maxTime: '23',
+    onSelect: function(selected) {
+      $('#start_time').datepicker("option", "maxTime", selected);
+    }
+   });
+ </script>

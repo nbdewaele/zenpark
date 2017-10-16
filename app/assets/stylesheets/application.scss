@@ -14,6 +14,44 @@ body {
 .text-babu, .icon-babu {
 	color: #00A699;
 }
+//NAVBAR
+
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+	background-color: #FF9F1C;
+}
+
+.navbar-default {
+	background-color: #FF9F1C;
+	height: 75px;
+}
+
+.navbar-default, .navbar-brand {
+	color: #A79AB2 !important;
+	font-size: 2em;
+	font-weight: 400;
+}
+
+.dropdown-toggle {
+	position: relative;
+	bottom: 1px;
+	left: 20px;
+}
+
+//Buttons
+.btn-block {
+	display: block;
+	white-space: normal;
+	width: 100%;
+}
+
+.btn {
+	color: #fff;
+	border-radius: 5px;
+	font-weight: bold;
+	padding: 9px 27px;
+}
 
 .btn-small {
 	padding: 5px 15px;
@@ -328,7 +366,7 @@ a.navbarelements {
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: white;
   /*background-color: transparent;*/
-  background-color: #31988D;
+  background-color: #FF9F1C;
 }
 // RESERVATIONS
 .reservation-table {
@@ -405,13 +443,15 @@ bottom: 20px;
 
 
 .homecontainer {
-	background-color: #A79AB2;
+	background-color: #011627;
 	opacity: .8;
 	height: 200px;
 	width: 700px;
 	position: absolute;
 	left: 70px;
+	top: 150px;
 	border:1px solid white;
+	border-radius: 20px;
 }
 
 .sidebar-item{
@@ -419,5 +459,5 @@ bottom: 20px;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
-background-color: #31988D
+background-color: #FF9F1C;
 }
