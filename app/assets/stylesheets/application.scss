@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
+@import "font-awesome";
 
 
 body {
@@ -19,6 +20,19 @@ body {
 	margin-top: 15px;
 }
 
+.btn:hover, .btn:focus {
+	color: #fff;
+}
+
+.btn.btn-default {
+	width: 100%;
+	border-color: #c4c4c4;
+	background-color: #73C1C6;
+	color: white !important ;
+	border-radius: 2px;
+	padding: 10px 0;
+	margin-top: 10px;
+}
 
 .btn.btn-normal {
 	border: 1px solid #ff5a5f;
@@ -34,7 +48,7 @@ body {
 //
 .btn.btn-form {
 	border: 1px solid #00A699;
-	background-color: #00A699;
+	background-color: #73C1C6;
 }
 
 .btn.btn-form:active {
@@ -53,6 +67,7 @@ body {
 	border-color: #2d467b;
 	background-color: #2d467b;
 }
+
 
 // PANELS
 .panel-default .panel-heading {
@@ -169,7 +184,7 @@ body {
 }
 
 .sidebar-link {
-	color: #82888a;
+	color: white;
 	text-decoration: none;
 }
 
@@ -184,19 +199,43 @@ body {
 	text-decoration: none;
 }
 
-// a.navbar-brand {
-// 	padding-left:15em;
-// 	font-size: 20px;
-// 	font-weight: bold;
-// 	font-family: 'Cabin Sketch', cursive;
-// }
+a.navbar-brand {
+/*padding-left:15em;
+*/font-size: 20px;
+font-weight: bold;
+font-family: 'Cabin Sketch', cursive;
+position: relative;
+right: 60px;
+}
 
+.searchbar {
+	padding-left: 12em;
+	position: relative;
+	bottom: 65px;
+	left: 60px;
+}
+.anywhere {
+	position: relative;
+	top: 11px ;
+	color:black;
+	font-size: 20px;
+}
 // li {
 // 	font-size: px;
 // }
 
 .text-center {
 	color: white;
+}
+
+.row {
+	background: grey;
+	opacity: 0.7;
+	width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+	position: center;
+	border-radius: 10%;
 }
 
 .newbody {
@@ -263,7 +302,9 @@ p.editprofile,  {
 	text-align: center;
 	color: white;
 	font-family: 'Cabin Sketch', cursive;
-}
+	padding-top: 2em;
+	font-size: 40px;
+	}
 
 .panel-heading {
 	text-align: center;
@@ -271,6 +312,24 @@ p.editprofile,  {
 	font-family: 'Cabin Sketch', cursive;
 }
 
+.viewmyprofile {
+	padding-bottom: 2.5em;
+}
+
+a.navbarelements {
+	color:black;
+}
+
+.navbar-default .navbar-nav > li > a {
+
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: white;
+  /*background-color: transparent;*/
+  background-color: #31988D;
+}
 // RESERVATIONS
 .reservation-table {
 	width: 100%;
@@ -323,4 +382,42 @@ p.editprofile,  {
 	font-size: 16px;
 	font-weight: 600;
 	color: #00A699;
+}
+
+.logo {
+position: relative;
+right: 25px;
+padding-top:1.9em;
+bottom: 20px;
+}
+
+.magnifyspan {
+	position:relative;
+	right: 35px;
+	top: 12px;
+	color: black;
+}
+
+
+.column-left{ float: left; width: 33%; }
+.column-right{ float: right; width: 33%; }
+.column-center{ display: inline-block; width: 33%; }
+
+
+.homecontainer {
+	background-color: #A79AB2;
+	opacity: .8;
+	height: 200px;
+	width: 700px;
+	position: absolute;
+	left: 70px;
+	border:1px solid white;
+}
+
+.sidebar-item{
+	text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
+background-color: #31988D
 }

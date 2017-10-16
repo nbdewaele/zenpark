@@ -19,7 +19,7 @@
 				<% @rooms.each do |room| %>
 					<div class="row">
 						<div class="col-md-2">
-							<%= image_tag room.cover_photo(:thumb) %>
+					<%= image_tag room.cover_photo(:thumb), :size => "260x180" %>
 						</div>
 							<!-- listing name -->
 						<div class="col-md-7">

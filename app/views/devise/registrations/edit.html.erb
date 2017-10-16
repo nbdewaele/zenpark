@@ -1,9 +1,10 @@
+<%= stylesheet_link_tag 'home' %>
+
 <head>
 	
 	    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 
 </head>
-
 
 <body class="profilebackground">
 
@@ -13,11 +14,9 @@
 		<p class="editprofile"> EDIT PROFILE </p>
 		</ul>
 		<br>
-		<%= link_to "View My Profile", user_path(current_user.id), class: "btn btn-default" %>
 	</div>
 
 	<div class="col-md-9 text-center">
-		<div class="panel-heading">YOUR PROFILE</div>
 		<div class="panel-body">
 			<div class="container">
 				<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -50,6 +49,10 @@
 				  <div class="form-group">
 				    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm Password", class: "form-control" %>
 				  </div>
+
+				  	<div class="viewmyprofile">		
+				  		<%= link_to "View My Profile", user_path(current_user.id), class: "btn btn-default" %>
+				  	</div>	
 
 				  <div class="actions">
 				    <%= f.submit "Save", class: "btn btn-btn-normal btn-block" %>
