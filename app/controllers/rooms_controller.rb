@@ -30,7 +30,6 @@ class RoomsController < ApplicationController
   end
 
   def pricing
-		@price = @room.price
   end
 
   def summary
@@ -41,7 +40,7 @@ class RoomsController < ApplicationController
   end
 
   def amenities
-		
+
   end
 
   def location
@@ -53,20 +52,18 @@ class RoomsController < ApplicationController
 		new_params = room_params.merge(active: true) if is_ready_room
 
 		if @room.update(new_params)
-			flash[:alert] = "Saved..."
-			redirect_to @room
+			flash[:notice] = "Saved..."
+			# redirect_to @room
 		else
-			redirect_back(fallback_location: request.referer)
+			flash[:alert] = "Not so fast..."
 		end
+		redirect_back(fallback_location: request.referer)
   end
 
 	# RESERVATIONS
 	def preload
 		today = Date.today
 		reservations = @room.reservations.where("start_date >= ? OR end_date >= ?", today, today)
-
-		time_block = Time.time_block
-		reservations = @room.reservations.where("start_time >= ? OR end_time >= ?", time_block, time_block)
 
 		render json: reservations
 	end
@@ -104,7 +101,7 @@ class RoomsController < ApplicationController
 	end
 
 	def is_ready_room
-		return !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? && !@room.summary.blank?
+		!@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? && !@room.summary.blank?
 	end
 
 	def room_params

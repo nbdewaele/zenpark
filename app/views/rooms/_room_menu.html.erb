@@ -12,13 +12,13 @@
 	</li>
 
 	<li class="sidebar-item">
-		<%= link_to "Description", summary_room_path, class: "sidebar-link active" %><% if !@room.summary.blank? %>
+		<%= link_to "Description", summary_room_path, class: "sidebar-link active" %><% if !@room.listing_name.blank? %>
 		<span class="pull-right text-babu"><i class="fa fa-check"></i></span>
 		<% end %>
 	</li>
 
 	<li class="sidebar-item">
-		<%= link_to "Photos", photo_upload_room_path, class: "sidebar-link active" %><% if !@room.photos.blank? %>
+		<%= link_to "Photos", photo_upload_room_path, class: "sidebar-link active" %> <% if !@room.photos.blank? %>
 		<span id="photo-check" class="pull-right text-babu"><i class="fa fa-check"></i></span>
 		<% end %>
 	</li>
@@ -34,14 +34,15 @@
 		<% end %>
 	</li>
 </ul>
-<hr>
+<hr/>
 
 
 
-
-<%# is_ready = !@room.price.blank? && !@room.photos.blank? && !@room.address.blank? %>
+<!-- MAY CONFLICT W PATCH METHOD IN MODELS -->
+<% is_ready = !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? %>
 
 <%= form_for @room do |f| %>
 	<%= f.hidden_field :active, value: true %>
 	<%= f.submit "Publish", id: "publish_button", class: "btn btn-normal btn-block", disabled: !@room.is_ready? %>
+	<!-- CONFLICT CONTINUED - REMOVE @ -->
 <% end %>

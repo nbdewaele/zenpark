@@ -24,7 +24,7 @@ class PagesController < ApplicationController
 
 		if (params[:start_date] && params[:end_date] && !params[:start_date].empty? && !params[:end_date].empty?)
 
-			start_date = Date.parse(params[:start_date])
+		start_date = Date.parse(params[:start_date])
 		end_date = Date.parse(params[:end_date])
 
 		@rooms.each do |room|
