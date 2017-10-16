@@ -38,7 +38,7 @@
 
       <br/>
 
-      <%= f.submit "Book Now", id: "btn_book", class: "btn btn-normal btn-block", disabled: true %>
+      <%= f.submit "Book Now", id: "btn_book", class: "btn btn-normal btn-block", disabled: false %>
     <% end %>
   </div>
 </div>
@@ -52,14 +52,12 @@
   }
 
   $(function() {
-
     unavailableDates = [];
 
     $.ajax({
       url: '<%= preload_room_path(@room) %>',
-      dateTyp: 'json',
+      dateType: 'json',
       success: function(data) {
-
         $.each(data, function(arrID, arrValue) {
             for(var d = new Date(arrValue.start_date); d <= new Date(arrValue.end_date); d.setDate(d.getDate() + 1)) {
               unavailableDates.push($.datepicker.formatDate('d-m-yy', d));

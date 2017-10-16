@@ -38,11 +38,9 @@
 
 
 
-<!-- MAY CONFLICT W PATCH METHOD IN MODELS -->
 <% is_ready = !@room.active && !@room.price.blank? && !@room.listing_name.blank? && !@room.photos.blank? && !@room.address.blank? %>
 
 <%= form_for @room do |f| %>
 	<%= f.hidden_field :active, value: true %>
 	<%= f.submit "Publish", id: "publish_button", class: "btn btn-normal btn-block", disabled: !@room.is_ready? %>
-	<!-- CONFLICT CONTINUED - REMOVE @ -->
 <% end %>

@@ -54,11 +54,17 @@ class RoomsController < ApplicationController
 
 		if @room.update(new_params)
 			flash[:notice] = "Saved..."
+			if @room.active == true
+				redirect_to rooms_path
+			else
+				redirect_back(fallback_location: request.referer)
+			end
 			# redirect_to @room
 		else
 			flash[:alert] = "Something went wrong..."
+			redirect_back(fallback_location: request.referer)
 		end
-		redirect_back(fallback_location: request.referer)
+
   end
 
 	# RESERVATIONS
