@@ -6,7 +6,7 @@
 
 body {
 	color: #565a5c;
-	background-color: #B8C7E9;
+	background-color: white;
 	font-family: 'PT Sans', sans-serif;
 }
 
@@ -51,6 +51,7 @@ body {
 	border-radius: 5px;
 	font-weight: bold;
 	padding: 9px 27px;
+	width: 40%;
 }
 
 .btn-small {
@@ -85,8 +86,10 @@ body {
 
 //
 .btn.btn-form {
-	border: 1px solid #00A699;
-	background-color: #73C1C6;
+	border: 1px solid #E71D36;
+	background-color: #E71D36;
+	position: relative;
+	left: 100px;
 }
 
 .btn.btn-form:active {
@@ -110,7 +113,7 @@ body {
 // PANELS
 .panel-default .panel-heading {
 	color: #ffffff;
-	background-color: #00A699;
+	background-color: #E71D36;
 	font-size: 18px;
 	font-weight: 400;
 }
@@ -209,6 +212,10 @@ body {
 	color: #00A699;
 }
 
+.form-control {
+	width: 40%;
+}
+
 // SIDEBAR
 .sidebar-list {
 	padding-left: 0;
@@ -267,9 +274,8 @@ right: 60px;
 }
 
 .row {
-	background: grey;
-	opacity: 0.7;
-	width: 400px;
+/*	opacity: 0.7;
+*/	width: 400px;
   margin: 16px auto;
   font-size: 16px;
 	position: center;
@@ -329,7 +335,6 @@ right: 60px;
 /* Edit Profile */
 
 .profilebackground {
-	background: url("paper.jpg");
    background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -349,6 +354,11 @@ p.editprofile,  {
 	color: white;
 	font-family: 'Cabin Sketch', cursive;
 }
+
+.panel-body {
+	background-color: #011627;
+}
+
 
 .viewmyprofile {
 	padding-bottom: 2.5em;
@@ -460,4 +470,15 @@ bottom: 20px;
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
 background-color: #FF9F1C;
+}
+
+
+.listingimg {
+border:1px solid #FF9F1C;
+position: relative;
+left: 20px;
+}
+
+div.col-md-3{
+
 }

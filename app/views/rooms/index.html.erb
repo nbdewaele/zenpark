@@ -1,12 +1,6 @@
 <div class="row">
 	<div class="col-md-3">
-		<ul class="sidebar-list">
-			<li class="sidebar-item"><%= link_to "Your listings", rooms_path, class: "sidebar-link active" %></li>
-			<li class="sidebar-item"><%= link_to "Your Reservations", your_reservations_path, class: "sidebar-link" %></li>
-			<li class="sidebar-item">
-				<%= link_to "Your Office Plans", your_trips_path, class: "sidebar-link" %>
-			</li>
-		</ul>
+	
 	</div>
 
 	<div class="col-md-9">
@@ -16,10 +10,11 @@
 			</div>
 			<div class="panel-body">
 
+
 				<% @rooms.each do |room| %>
-					<div class="row">
+					<div class=>
 						<div class="col-md-2">
-					<%= image_tag room.cover_photo(:thumb), :size => "260x180" %>
+					<%= image_tag room.cover_photo(:thumb), :size => "250x200", :class => "listingimg" %>
 						</div>
 							<!-- listing name -->
 						<div class="col-md-7">
@@ -30,6 +25,13 @@
 	           </div>
 					</div>
 					<hr/>
+						<ul class="sidebar-list">
+			<li class="sidebar-item"><%= link_to "Your listings", rooms_path, class: "sidebar-link active" %></li>
+			<li class="sidebar-item"><%= link_to "Your Reservations", your_reservations_path, class: "sidebar-link" %></li>
+			<li class="sidebar-item">
+				<%= link_to "Your Office Plans", your_trips_path, class: "sidebar-link" %>
+			</li>
+		</ul>
 				<% end %>
 			</div>
 		</div>
