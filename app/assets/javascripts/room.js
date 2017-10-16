@@ -17,7 +17,7 @@ $(function(){
 	});
 
 	var infoWindow = new google.maps.InfoWindow({
-		content: '<div id="content"><img src="'+$("#room_image").val()+'"></div>'
+		content: '<div id="content"><img src="'+$("#room_image").val(90)+'"></div>'
 	});
 
 	infoWindow.open(map, marker);

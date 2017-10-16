@@ -30,6 +30,7 @@ class RoomsController < ApplicationController
   end
 
   def pricing
+		@price = @room.price
   end
 
   def summary
@@ -55,7 +56,7 @@ class RoomsController < ApplicationController
 			flash[:notice] = "Saved..."
 			# redirect_to @room
 		else
-			flash[:alert] = "Not so fast..."
+			flash[:alert] = "Something went wrong..."
 		end
 		redirect_back(fallback_location: request.referer)
   end

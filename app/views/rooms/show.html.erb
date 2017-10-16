@@ -2,7 +2,7 @@
 
 <div class="row">
 	<div class="col-md-12">
-		<%= image_tag @room.cover_photo, width: "100%" %>
+		<%= image_tag @room.cover_photo(nil), width: "100%" %>
 	</div>
 </div>
 <br>
@@ -160,7 +160,7 @@
 						});
 
 						var infoWindow = new google.maps.InfoWindow({
-							content: '<div id="content"><%= image_tag @room.cover_photo(:medium) %></div>'
+							content: '<div id="content"><%= image_tag @room.cover_photo(:small) %></div>'
 						});
 
 						infoWindow.open(map, marker);
