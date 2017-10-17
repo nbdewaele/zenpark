@@ -528,6 +528,19 @@ div.col-md-3{
 	}
 }
 
+#listings-panel {
+	width: 350px;
+}
+
+#createoffice-button {
+	left: 270px;
+}
+
+#photo-div, #pricing-div, 
+#summary-div, 
+#amenities-div, #location-div, #listing-div{
+	width: 500px;
+}
 
 /*body > nav > div:nth-child(2) > div > div.col-md-9 > div > div.panel-body > div > div.row > div{
 	padding-right: 900px;
