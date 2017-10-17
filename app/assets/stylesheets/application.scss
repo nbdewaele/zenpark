@@ -54,8 +54,8 @@ body {
 	border-radius: 5px;
 	font-weight: bold;
 	padding: 9px 27px;
-	width: 40%;
-}
+/*	width: 40%;
+*/}
 
 .btn-small {
 	padding: 5px 15px;
@@ -471,6 +471,10 @@ bottom: 20px;
 .column-right{ float: right; width: 33%; }
 .column-center{ display: inline-block; width: 33%; }
 
+.column-center, .column-right, .column-left{
+	position: relative;
+	top: 80px;
+}
 
 .homecontainer {
 	background-color: #011627;
@@ -478,7 +482,7 @@ bottom: 20px;
 	height: 200px;
 	width: 700px;
 	position: absolute;
-	left: 70px;
+	left: 140px;
 	top: 150px;
 	border:1px solid white;
 	border-radius: 20px;
@@ -519,7 +523,8 @@ div.col-md-3{
 	width: 100%;
 	text-align: center;
 	align-content: center;
-		#summary-save, #pricing-save, #location-save, #photo-save, #amenities-save{
+		#summary-save, #pricing-save, 
+		#location-save, #photo-save, #amenities-save{
 	left: 0;
 	width:100%;
 	}
@@ -539,7 +544,7 @@ div.col-md-3{
 #photo-div, #pricing-div, 
 #summary-div, 
 #amenities-div, #location-div, 
-#trips-div{
+{
 	width: 500px;
 	position: relative;
 	right:85px;
@@ -550,6 +555,13 @@ div.col-md-3{
 	position: relative;
 	right:85px;
 }
+#trips-div{
+	width: 500px;
+	position: relative;
+	right:150px;
+}
+
+
 
 /*body > nav > div:nth-child(2) > div > div.col-md-9 > div > div.panel-body > div > div.row > div{
 	padding-right: 900px;
