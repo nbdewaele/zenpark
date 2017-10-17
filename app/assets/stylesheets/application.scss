@@ -13,6 +13,7 @@ body {
 
 .text-babu, .icon-babu {
 	color: #00A699;
+	float:right;
 }
 //NAVBAR
 
@@ -32,6 +33,8 @@ body {
 	font-size: 2em;
 	font-weight: 400;
 }
+
+
 
 .dropdown-toggle {
 	position: relative;
@@ -76,12 +79,16 @@ body {
 .btn.btn-normal {
 	border: 1px solid #ff5a5f;
 	background-color: #ff5a5f;
+		position: relative;
+		/*left:210px;*/
 }
 
 .btn.btn-normal:active {
 	outline: none;
 	border-color: #e00007;
 	background-color: #e00007;
+
+
 }
 
 //
@@ -113,7 +120,7 @@ body {
 // PANELS
 .panel-default .panel-heading {
 	color: #ffffff;
-	background-color: #E71D36;
+	background-color: #ff5a5f;
 	font-size: 18px;
 	font-weight: 400;
 }
@@ -222,10 +229,20 @@ body {
 	list-style: none;
 }
 
+.sidebar-link.active{
+	color: #ff5a5f;
+
+}
+
+
+
+
+
 .sidebar-item {
-	padding: 10px 0;
+	padding: 10px 100px 10px 120px;
 	font-size: 16px;
 	color: #82888a;
+	text-align: left;
 }
 
 .sidebar-link {
@@ -288,7 +305,10 @@ right: 60px;
 	background-repeat: no-repeat;
 
 }
-
+#new_room{
+	position: relative;
+	left: -10px;
+}
 
 .btn-file {
 	position: relative;
@@ -464,9 +484,7 @@ bottom: 20px;
 	border-radius: 20px;
 }
 
-.sidebar-item{
-	text-align: center;
-}
+
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus{
 background-color: #FF9F1C;
@@ -482,3 +500,35 @@ left: 20px;
 div.col-md-3{
 
 }
+
+#publish_button{
+	left: 0;
+}
+.logo{
+	right: 0 !important;
+}
+#summary-container, #pricing-container,
+ #location-container, #photo-container, #amenities-container{
+ 	.check-box-list{
+ 		text-align: left;
+ 	}
+ 	.select-photo-btn{
+ 		background-color: #73C1C6;
+ 		border-radius: 4px;
+ 	}
+	width: 100%;
+	text-align: center;
+	align-content: center;
+		#summary-save, #pricing-save, #location-save, #photo-save, #amenities-save{
+	left: 0;
+	width:100%;
+	}
+	.form-control{
+		width:100%;
+	}
+}
+
+
+/*body > nav > div:nth-child(2) > div > div.col-md-9 > div > div.panel-body > div > div.row > div{
+	padding-right: 900px;
+}*/

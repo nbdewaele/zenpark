@@ -1,7 +1,6 @@
 <div class="row">
-	<div class="col-md-3">
-		<%= render 'room_menu' %>
-	</div>
+<!-- 	<div class="col-md-3">
+	</div> -->
 	<div class="col-md-9">
 		<div class="panel panel-default">
 
@@ -10,6 +9,9 @@
 			</div>
 
 			<div class="panel-body">
+				<div class="room-menu">
+		<%= render 'room_menu' %>
+</div>
 				<div class="container">
 					<% form_for @room do |f| %>
 
@@ -25,7 +27,7 @@
 							<div class="col-md-4 select">
 								<div class="form-group">
 									<label for="">Office Type</label>
-									<%= f.select :room_type, [["Living Room", "Living Room"], ["Dining Room", "Dining Room"], ["Private Room", "Private Room"], ["Other", "Other"]],
+									<%= f.select :room_type, [["Living Room", "Living Room"],  ["Dining Room", "Dining Room"], ["Private Room", "Private Room"], ["Other", "Other"]],
 									id: "room_type", prompt: "Select...", class: "form-control"  %>
 								</div>
 							</div>
