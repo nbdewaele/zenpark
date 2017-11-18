@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+![Screenshot of Home for portfolio site](/app/assets/images/booking_sc.png?raw=true "Home Page")
