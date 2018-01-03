@@ -276,4 +276,7 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 
 	config.omniauth :facebook, ENV['FB_API_KEY'], ENV['FB_API_SECRET'], scope: 'email', info_fields: 'email, name'
+
+	
+	config.secret_key = ENV['DEVISE_SECRET_KEY'] if Rails.env.production?
 end
