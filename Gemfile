@@ -11,6 +11,8 @@ gem "font-awesome-rails"
 gem 'rails', '~> 5.1.4'
 gem 'devise', '~>4.4.1'
 
+# should get images to show in heroku
+gem 'rails_12factor', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 gem 'bootstrap-sass', '~> 3.3.6'
