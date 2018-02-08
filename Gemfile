@@ -9,7 +9,7 @@ gem "bourbon"
 gem "font-awesome-rails"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
-gem 'devise'
+gem 'devise', '~>4.4.1'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -50,7 +50,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
+  gem 'factory_bot'
   gem 'guard-rspec'
   gem 'spring-commands-rspec'
   gem 'vcr'
