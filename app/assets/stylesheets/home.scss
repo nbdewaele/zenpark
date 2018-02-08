@@ -7,7 +7,7 @@ body {
   background-repeat: no-repeat;
 }
 
-
+@import "font-awesome";
 
 
 div {
@@ -17,9 +17,12 @@ div {
 }
 
 .header {
-	font-size: 20px;
-	color: #A79AB2;
+	font-size: 3.5em;
+	color: #ffffff;
+	text-shadow: 0 0 0.2em #ff0000, 0 0 0.2em #ff0000, 0 0 0.2em #ff0000;
   font-weight: bold;
+	margin-top: 2em;
+	font-family: 'Oleo Script', cursive;
 }
 #box {
   height: 200px;
@@ -31,15 +34,6 @@ div {
   position: relative;
   border-radius: 9%;
   opacity: .8;
-}
-
-#underbox {
-  border-radius: 50%;
-  background: rgba(black, 0);
-  height: inherit;
-  width: inherit;
-  transition: all 1s ease;
-  position: absolute;
 }
 
 .column-center, .column-right, .column-left {

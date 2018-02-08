@@ -1,15 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "toastr";
-
-body {
+@import url('https://fonts.googleapis.com/css?family=Nova+Flat|Oleo+Script');body {
   color: #565a5c;
   background-color: #F8F8F8;
-  font-family: "Varela Round", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 a {
-  color: #00A699;
+  color: #FF5A5F;
 }
 
 .container {
@@ -17,7 +15,7 @@ a {
 }
 
 .text-babu, .icon-babu {
-  color: #00A699;
+  color: #FF5A5F;
 }
 
 .text-red, .icon-red {
@@ -25,14 +23,27 @@ a {
 }
 
 // NAVBARS
-.navbar-default {
-  background-color: #FFFFFF;
+
+
+
+.navbar-inner {
+  background:transparent;
+	position: relative;
+	margin-top: 2em;
 }
 
-.navbar-default .navbar-brand {
+
+.navbar-brand {
   color: #FF5A5F;
-  font-size: 2em;
+  font-size: 4em;
   font-weight: 400;
+	font-family: 'Nova Flat', sans-serif;
+	text-shadow: 2px 2px #ff0000;
+	position: absolute;
+  left: 50%;
+  margin-left: -120px !important;  /* 50% of your logo width */
+  display: block;
+
 }
 
 // BUTTONS
@@ -40,6 +51,17 @@ a {
   display: block;
   white-space: normal;
   width: 100%;
+}
+
+.dropdown {
+	font-size: 1.5em;
+	margin-left: .5em;
+}
+
+.caret {
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+		margin-bottom: 0.2em;
 }
 
 .btn {
@@ -50,12 +72,12 @@ a {
 }
 
 .btn-small {
-  padding: 5px 15px;
-  margin-top: 15px;
+  margin-top: 19px;
 }
 
 .btn:hover, .btn:focus {
-  color: #fff;
+  background: transparent;
+	opacity: 0.5;
 }
 
 .btn.btn-default {
@@ -80,8 +102,8 @@ a {
 }
 
 .btn.btn-form {
-  border: 1px solid #00A699;
-  background-color: #00A699;
+  border: 1px solid #FF5A5F;
+  background-color: #FF5A5F;
 }
 
 .btn.btn-form:active {
@@ -104,7 +126,7 @@ a {
 // PANELS
 .panel-default .panel-heading {
   color: #ffffff;
-  background-color: #00A699;
+  background-color: #FF5A5F;
   font-size: 18px;
   font-weight: 400;
 }
@@ -160,18 +182,18 @@ a {
 
 .form-group input {
   height: 45px;
-  border: 1px solid #00A699;
+  border: 1px solid #FF5A5F;
 }
 
 .form-group textarea {
-  border: 1px solid #00A699;
+  border: 1px solid #FF5A5F;
 }
 
 .form-group select {
   width: 100%;
   color: #565a5c;
   background-color: white;
-  border: 1px solid #00A699;
+  border: 1px solid #FF5A5F;
   border-radius: 2px;
   padding: 10px;
   appearance: none;
@@ -183,7 +205,7 @@ a {
   content: '\25bc';
   font-size: 1.2em;
   position: absolute;
-  color: #00A699;
+  color: #FF5A5F;
   top: 35px;
   right: 30px;
   transform: scale(0.94, 0.62);
@@ -195,7 +217,7 @@ a {
   margin-bottom: -0.25em;
   margin-right: 5px;
   vertical-align: top;
-  border: 1px solid #00A699;
+  border: 1px solid #FF5A5F;
   border-radius: 2px;
   appearance: none;
   -moz-appearance: none;
@@ -208,7 +230,7 @@ a {
   font-size: 0.95em;
   text-align: center;
   width: 1.25em;
-  color: #00A699;
+  color: #FF5A5F;
 }
 
 // SIDEBAR
@@ -297,9 +319,9 @@ a {
 }
 
 .form-control.datepicker {
-  color: #00A699;
+  color: #FF5A5F;
   background-color: white;
-  border: 1px solid #00A699;
+  border: 1px solid #FF5A5F;
   text-align: center;
 }
 
@@ -333,7 +355,7 @@ a {
   text-align: center;
   font-size: 16px;
   font-weight: 600;
-  color: #00A699;
+  color: #FF5A5F;
 }
 
 // HOME PAGE
