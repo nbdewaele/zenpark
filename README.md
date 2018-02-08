@@ -1,8 +1,8 @@
 # README
-![escher](/app/assets/escher.png)
+![escher](/app/assets/escher_sc.png)
 
 
-this is a MVP airbnb for co-working space. It is my final fullstack project for Wyncode Academy. The puropse was to demonstrate the use of ruby on rails to solve a real world problem with a platform that allows host users to make money on their space and allows guest users to save time, money and energy by accessing close by workspaces, it also affords guests greater comfort and unique experiences big-box brick and morter can't provide.
+this is a MVP airbnb for co-working space. It is my final full-stack project for Wyncode Academy. The purpose was to demonstrate the use of ruby on rails to solve a real world problem with a platform that allows host users to make money on their space and allows guest users to save time, money and energy by accessing close by workspaces, it also affords guests greater comfort and unique experiences big-box brick and mortar can't provide.
 
 At this time, the app allows a host to list a work space. Routing to the listings and guest booking need work and a payment option has not been integrated yet; we did this in a week.
 
