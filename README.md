@@ -38,3 +38,6 @@ Things you may want to cover:
 
 * ...
 ![Screenshot of Home for portfolio site](/app/assets/images/booking_sc.png?raw=true "Home Page")
+
+deploy assets
+RAILS_ENV=production bundle exec rake assets:precompile
