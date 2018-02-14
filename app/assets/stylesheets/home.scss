@@ -1,6 +1,6 @@
 body {
 
-	background: url("/livingroom.jpg");
+	background: { background-image: url(<%= asset_path 'livingroom.png' %>) };
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
