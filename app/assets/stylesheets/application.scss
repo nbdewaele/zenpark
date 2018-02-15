@@ -8,6 +8,7 @@
 
 a {
   color: #FF5A5F;
+  margin-top: 11px;
 }
 
 .container {
@@ -40,10 +41,9 @@ a {
 	font-family: 'Nova Flat', sans-serif;
 	text-shadow: 2px 2px #ff0000;
 	position: absolute;
-  left: 50%;
+  left: 18%;
   margin-left: -120px !important;  /* 50% of your logo width */
   display: block;
-
 }
 
 // BUTTONS
@@ -368,4 +368,12 @@ a {
 .banner {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.header {
+  width: 100%;
+}
+
+a.btn.btn-primary {
+  background-color: #fc5b62;
 }
