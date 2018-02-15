@@ -41,3 +41,10 @@ Things you may want to cover:
 
 deploy assets
 RAILS_ENV=production bundle exec rake assets:precompile
+
+remove everything from public/assets
+
+
+
+
+configure atom to make two spaces for every tab hit

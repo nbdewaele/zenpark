@@ -102,3 +102,4 @@ Rails.application.configure do
 
 # Don't fallback to assets pipeline if a precompiled asset is missed
 config.assets.compile = true
+end
